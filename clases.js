@@ -5,9 +5,9 @@
 
 
 class Turno {
-    constructor(dia, hora, libre) {
+    constructor(dia, turno, libre) {
         this.dia = dia
-        this.hora = hora
+        this.turno = turno
         this.libre = libre
     }
 
