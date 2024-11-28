@@ -11,4 +11,11 @@ function nuevoTurno(data){
     
 }
 
-module.exports = {nuevoTurno}
+function nuevoCliente(datos){
+    console.log("--Controlador--")
+    const unCliente = new Clases.Cliente(datos.nombre, datos.dni, datos.telefono)
+    console.log(unCliente)
+    Modelo.nuevoCliente(unCliente)
+}
+
+module.exports = {nuevoTurno, nuevoCliente}
