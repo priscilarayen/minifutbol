@@ -15,4 +15,15 @@ function nuevoTurno(data){
     }
 }
 
-module.exports = {nuevoTurno}
+function nuevoCliente(body){
+    console.log(body)
+
+    
+        Controlador.nuevoCliente(body)
+    }
+
+
+
+
+
+module.exports = {nuevoTurno, nuevoCliente}

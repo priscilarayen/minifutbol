@@ -19,8 +19,27 @@ app.post('/nuevoturno',(req, res)=>{
 
     Seguridad.nuevoTurno(req.body)
 
-    res.send(JSON.stringify(req.body))
+    
+    res.redirect('/nuevocliente')
 })
+
+app.get ('/nuevocliente',(req, res)=>{
+    
+    res.render('cliente.ejs',{url : "http://localhost:3000"})
+})
+
+app.post('/nuevocliente',(req, res)=>{
+    console.log(req.body)
+
+    Seguridad.nuevoCliente(req.body)
+
+    res.send(JSON.stringify(req.body))
+    
+})
+
+
+
 
 const PORT = 3000
 app.listen(PORT, ()=>{console.log(`Escuchando en el puerto  ${PORT} `)})
+
