@@ -20,4 +20,15 @@ class Turno {
 
 // miTurno.mostrarTurno();
 
+<<<<<<< HEAD
+class Cliente{
+    constructor(nombre,dni,telefono){
+        this.nombre = nombre
+        this.dni = dni;
+        this.telefono = telefono;
+    }
+}
+module.exports = {Turno,Cliente};
+=======
 module.exports = {Turno};
+>>>>>>> 40ca6f2a5eb189328f7a34282cd241e11d6f36dd

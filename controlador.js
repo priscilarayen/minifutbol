@@ -11,4 +11,16 @@ function nuevoTurno(data){
     
 }
 
+<<<<<<< HEAD
+function nuevoCliente(data) {
+    console.log("--Controlador--")
+
+    const unCliente = new Clases.Cliente(data.nombre,data.dni,data.telefono)
+    console.log(unCliente)
+    Modelo.nuevoCliente(unCliente)
+}
+
+module.exports = {nuevoTurno, nuevoCliente}
+=======
 module.exports = {nuevoTurno}
+>>>>>>> 40ca6f2a5eb189328f7a34282cd241e11d6f36dd
