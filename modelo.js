@@ -14,7 +14,7 @@ function nuevoTurno(data){
     fs.writeFileSync('./db/turnos.txt',JSON.stringify(turnos))
 }
 
-function nuevoCliente(datos){
+function Clientenuevo(datos){
     console.log("--Modelo--");
     let str_cliente = fs.readFileSync('./db/clientes.txt', 'utf-8')
     let clientes = []
@@ -25,4 +25,4 @@ function nuevoCliente(datos){
     fs.writeFileSync('./db/clientes.txt',JSON.stringify(clientes))
 }
 
-module.exports = {nuevoTurno, nuevoCliente}
+module.exports = {nuevoTurno, Clientenuevo}
