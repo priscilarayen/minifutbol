@@ -19,5 +19,11 @@ class Turno {
 // const miTurno = new Turno("lunes",2,true)
 
 // miTurno.mostrarTurno();
-
-module.exports = {Turno};
+class Cliente{
+    constructor(nombre,dni,telefono){
+        this.nombre = nombre
+        this.dni = dni;
+        this.telefono = telefono;
+    }
+}
+module.exports = {Turno,Cliente};
