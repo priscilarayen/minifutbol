@@ -1,14 +1,30 @@
 const Clases = require('./clases.js')
 const Modelo = require('./modelo.js')
 
-function nuevoTurno(data){
-    console.log("--Controlador--")
-
-    //data.libre=='on'?true:false;
-    const unTurno = new Clases.Turno(data.dia, data.turno, data.libre)
-    console.log(unTurno)
-    Modelo.nuevoTurno(unTurno)
-    
+function nuevoTurno(data) {
+    try {
+        console.log("--Controlador--");
+        const libre = data.libre === 'Libre';
+        const unTurno = new Clases.Turno(data.dia, data.turno, libre);
+        console.log(unTurno);
+        Modelo.nuevoTurno(unTurno);
+    } catch (error) {
+        console.error("Error al crear un nuevo turno:", error.message);
+    }
 }
 
-module.exports = {nuevoTurno}
+function nuevoCliente(data) {
+    try {
+        console.log("--Controlador--");
+        if (!data.nombre || !data.dni || !data.telefono) {
+            throw new Error("Datos incompletos para crear un cliente.");
+        }
+        const unCliente = new Clases.Cliente(data.nombre, data.dni, data.telefono);
+        console.log(unCliente);
+        Modelo.nuevoCliente(unCliente);
+    } catch (error) {
+        console.error("Error en nuevoCliente:", error.message);
+    }
+}
+
+module.exports = {nuevoTurno,nuevoCliente}
